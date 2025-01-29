@@ -159,8 +159,7 @@ import dlib
 from scipy.spatial import distance as dist
 import argparse
 from threading import Thread
-import os
-
+dlib.DLIB_USE_CUDA = False
 # Initialize ground truth and predictions
 predicted_drowsiness_states = []
 predicted_yawn_states = []
@@ -260,9 +259,12 @@ def compute_head_pose(shape):
     (success, rotation_vector, translation_vector) = cv2.solvePnP(model_points, image_points, camera_matrix, dist_coeffs)
     return rotation_vector, translation_vector
 
-ap = argparse.ArgumentParser()
-ap.add_argument("-w", "--webcam", type=int, default=0, help="index of webcam on system")
-args = vars(ap.parse_args())
+# ap = argparse.ArgumentParser()
+# ap.add_argument("-w", "--webcam", type=int, default=0, help="index of webcam on system")
+# args = vars(ap.parse_args())
+
+args = {}
+args["webcam"] = 1
 
 EYE_AR_THRESH = 0.4
 EYE_AR_CONSEC_FRAMES = 30
