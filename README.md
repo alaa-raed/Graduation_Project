@@ -34,3 +34,17 @@ YAWN_THRESH = 20`	//change this according to the distance from the camera
 
 
 
+* To install podman on linux 
+```
+sudo apt install -y podman
+```
+
+* To create image of the project
+```
+podman build -t drowsinessv1 .
+```
+
+* To run the container
+```
+podman run -it --rm   --device=/dev/video0   -v /tmp/.X11-unix:/tmp/.X11-unix   -e DISPLAY=$DISPLAY   --security-opt label=disable   drowsinessv1
+```
