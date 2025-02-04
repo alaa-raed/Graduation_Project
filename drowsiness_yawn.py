@@ -264,7 +264,7 @@ def compute_head_pose(shape):
 # args = vars(ap.parse_args())
 
 args = {}
-args["webcam"] = 1
+args["webcam"] = 0
 
 EYE_AR_THRESH = 0.4
 EYE_AR_CONSEC_FRAMES = 30
