@@ -29,4 +29,4 @@ jobs:
     - name: Build and push Docker image
       run: |
         docker build --target production -t v3n0mhkr/prince-travel .
-        docker push v3n0mhkr/prince-travel:v0.1
+        docker push v3n0mhkr/prince-travel:latest
