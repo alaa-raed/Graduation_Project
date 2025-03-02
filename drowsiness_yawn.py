@@ -207,10 +207,10 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
-
 # Calculate and display metrics after the video stream
 drowsiness_cm, drowsiness_accuracy, drowsiness_recall, drowsiness_r2 = calculate_metrics(predicted_drowsiness_states, predicted_drowsiness_states)
 yawn_cm, yawn_accuracy, yawn_recall, yawn_r2 = calculate_metrics(predicted_yawn_states, predicted_yawn_states)
+
 
 print("Drowsiness Confusion Matrix:")
 print(drowsiness_cm)
