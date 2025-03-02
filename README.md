@@ -33,7 +33,6 @@ YAWN_THRESH = 20`	//change this according to the distance from the camera
 * https://www.pyimagesearch.com/
 
 
-
 * To install podman on linux 
 ```
 sudo apt install -y podman
