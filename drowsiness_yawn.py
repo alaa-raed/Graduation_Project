@@ -126,8 +126,9 @@ detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 predictor = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat')
 
 print("-> Starting Video Stream")
-cap = cv2.VideoCapture(args["webcam"])
+#cap = cv2.VideoCapture(args["webcam"])
 # cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M','J','P','G'))
+cap = cv2.VideoStream(usePiCamera=True).start()
 time.sleep(2)  # Allow the camera to initialize
 
 while True:
